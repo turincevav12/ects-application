@@ -1,0 +1,191 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Data.Win.ADODB, Vcl.Menus;
+
+type
+  TForm2 = class(TForm)
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    ADOConnection1: TADOConnection;
+    ADOQuery1: TADOQuery;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    procedure FormActivate(Sender: TObject);
+    procedure FormClick(Sender: TObject);
+    procedure FormDblClick(Sender: TObject);
+    function FormAlignInsertBefore(Sender: TWinControl; C1,
+      C2: TControl): Boolean;
+    procedure FormAlignPosition(Sender: TWinControl; Control: TControl;
+      var NewLeft, NewTop, NewWidth, NewHeight: Integer; var AlignRect: TRect;
+      AlignInfo: TAlignInfo);
+    procedure FormCanResize(Sender: TObject; var NewWidth, NewHeight: Integer;
+      var Resize: Boolean);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure FormConstrainedResize(Sender: TObject; var MinWidth, MinHeight,
+      MaxWidth, MaxHeight: Integer);
+    procedure FormContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDeactivate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormDockDrop(Sender: TObject; Source: TDragDockObject; X,
+      Y: Integer);
+    procedure FormDockOver(Sender: TObject; Source: TDragDockObject; X,
+      Y: Integer; State: TDragState; var Accept: Boolean);
+    procedure FormDragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure FormDragOver(Sender, Source: TObject; X, Y: Integer;
+      State: TDragState; var Accept: Boolean);
+    procedure FormEndDock(Sender, Target: TObject; X, Y: Integer);
+    procedure FormGetSiteInfo(Sender: TObject; DockClient: TControl;
+      var InfluenceRect: TRect; MousePos: TPoint; var CanDock: Boolean);
+    procedure FormMouseActivate(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y, HitTest: Integer;
+      var MouseActivate: TMouseActivate);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.FormActivate(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+function TForm2.FormAlignInsertBefore(Sender: TWinControl; C1,
+  C2: TControl): Boolean;
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormAlignPosition(Sender: TWinControl; Control: TControl;
+  var NewLeft, NewTop, NewWidth, NewHeight: Integer; var AlignRect: TRect;
+  AlignInfo: TAlignInfo);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormCanResize(Sender: TObject; var NewWidth,
+  NewHeight: Integer; var Resize: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormClick(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormConstrainedResize(Sender: TObject; var MinWidth, MinHeight,
+  MaxWidth, MaxHeight: Integer);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDblClick(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDeactivate(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDestroy(Sender: TObject);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDockDrop(Sender: TObject; Source: TDragDockObject; X,
+  Y: Integer);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDockOver(Sender: TObject; Source: TDragDockObject; X,
+  Y: Integer; State: TDragState; var Accept: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDragDrop(Sender, Source: TObject; X, Y: Integer);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormDragOver(Sender, Source: TObject; X, Y: Integer;
+  State: TDragState; var Accept: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormEndDock(Sender, Target: TObject; X, Y: Integer);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormGetSiteInfo(Sender: TObject; DockClient: TControl;
+  var InfluenceRect: TRect; MousePos: TPoint; var CanDock: Boolean);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormMouseActivate(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y, HitTest: Integer;
+  var MouseActivate: TMouseActivate);
+begin
+FORM2.Show;
+end;
+
+procedure TForm2.FormMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Integer);
+begin
+FORM2.Show;
+end;
+
+end.

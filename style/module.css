@@ -1,0 +1,133 @@
+.block_content{
+    width: 90%;
+    height: 100px;
+    background: honeydew;
+    margin: 20px auto;
+    font-size: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0px black;
+    cursor: pointer;
+    font-family: monospace;
+    text-align: center;
+    line-height: 100px;
+}
+.block_content:hover{
+    box-shadow: 0 0 3px 0px red;
+}
+.block_name{
+    width: 80%;
+    height: 60px;
+    font-size: 18px;
+    font-family: monospace;
+}
+.block_specional{
+    width: 90%;
+    min-height: 90px;
+    max-height: 130px;
+    background: azure;
+    box-shadow: 0 0 2px 1px black;
+    cursor: pointer;
+    font-size: 35px;
+    margin: 20px 5%;
+    line-height: 45px;
+}
+.block_specional:hover{
+    background: lightcyan;
+}
+#block_accept{
+    display: block;
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    background: whitesmoke;
+    box-shadow: 0 0 1px 0 black;
+    top: 35%;
+    left: 35%;    
+}
+.deleteApplicant{
+    display: inline-block;
+    float: right;
+    font-size: 21px;
+}
+.deleteApplicant:hover{
+    color: red;
+}
+#top_line_block_accept{
+    width: 100%;
+    height: 20px;
+    font-family: monospace;
+    font-size: 21px;
+    background: rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 0px 0px black;
+}
+#text_accept{
+    font-size: 30px;
+    font-family: monospace;
+
+}
+#container_text_accept{
+    width: 100%;
+    height: calc(100% - 70px);
+    text-align: center;
+    line-height: 70px;
+}
+#bottom_line_block_accept{
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+}
+.accep_block{
+    width: 100px;
+    height: 30px;
+    box-shadow: 0 0 1px 0 black;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+}
+#window_applicant_baza {
+    background: white;
+    width: 92%;
+    height: 95%;
+    position: fixed;
+    box-shadow: 0 0 2px 0 black;
+    left: 4%;
+    overflow: auto;
+    top: 5%;
+    border-radius: 5px;
+}
+#line_top_window_applicant_baza{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: monospace;
+    overflow: auto;
+}
+#line_top_sort{
+    width: 100%;
+    height: 30px;
+    box-shadow: 0 0 2px 0 black;
+    display: inline-flex;
+}
+.button_sort{
+    width: 150px;
+    height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.input_name{
+    width: 100%;
+    font-family: monospace;
+    font-size: 18px;
+}
+#button_name{
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    margin: 5px auto;
+    box-shadow: 0 0 2px 0 black;
+    cursor: pointer;
+}

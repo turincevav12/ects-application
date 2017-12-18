@@ -1,0 +1,68 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
+  Vcl.ExtCtrls, Vcl.Imaging.pngimage;
+
+type
+  TForm3 = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Image2: TImage;
+    Image3: TImage;
+    procedure Image2Click(Sender: TObject);
+    procedure Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  image2.Visible:=True;
+end;
+
+procedure TForm3.Image2Click(Sender: TObject);
+var
+  SaveTxt:TStringList;
+begin
+SaveTxt:=TStringList.Create;
+SaveTxt.LoadFromFile(ExtractFilePath(application.ExeName)+ 'login.txt');
+if edit3.Text = edit4.text then
+  begin
+     SaveTxt.Add(Edit2.Text + ' ' + Edit3.text);
+     SaveTxt.SaveToFile(ExtractFilePath(application.ExeName)+ 'login.txt');
+     form3.close;
+  end
+  else ShowMessage ('Повторите ввод пароля');
+end;
+procedure TForm3.Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  image2.Visible:=False;
+end;
+
+end.

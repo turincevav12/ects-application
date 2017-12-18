@@ -1,0 +1,36 @@
+body{
+    background: whitesmoke;
+}
+.form_login{
+    width: 80%;
+    height: 70%;
+    margin: 30px auto 0;
+    box-shadow: 0 0 2px 0 black;
+    background: lightgrey;
+}
+.buttons{
+    width: 80%;
+    height: 20%;
+    margin: 20px 10%;
+    box-shadow: 0 0 2px 0 black;
+    font-family: monospace;
+    font-size: 45px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background: gray;
+}
+.line{
+    width: 30%;
+    height: 20px;
+    background-size: 70px;
+    margin: 0px auto 0;
+    background-image: url('../image/rope.png')
+}
+.input{
+    width: 90%;
+    margin: 15px 5%;
+    font-size: 25px;
+    font-family: monospace;
+    color: black;
+}

@@ -1,0 +1,145 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.StdCtrls,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    Image2: TImage;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label4: TLabel;
+    Image4: TImage;
+    Image3: TImage;
+    Image5: TImage;
+    procedure Label1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+    procedure Image3Click(Sender: TObject);
+    procedure Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+      Y: Integer);
+    procedure Image5Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure Edit2KeyPress(Sender: TObject; var Key: Char);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit3, Unit4;
+
+procedure TForm1.Edit2KeyPress(Sender: TObject; var Key: Char);
+var
+  pass:string;
+begin
+  pass:=pass+Key;
+  Key:='*';
+  Caption:=pass;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  pass:string;
+  key:Char;
+begin
+
+end;
+
+procedure TForm1.Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+image2.Visible:= True;
+image3.Visible:= True;
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+  FORM3.Show;
+end;
+
+procedure TForm1.Image2MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  image2.Visible:= False;
+end;
+
+procedure TForm1.Image3Click(Sender: TObject);
+var
+  SaveTxt:TStringList;
+  o:integer;
+  loginandpass:string;
+begin
+SaveTxt:=TStringList.Create;
+SaveTxt.LoadFromFile(ExtractFilePath(application.ExeName)+ 'login.txt');
+Loginandpass:=edit1.Text+' '+Edit2.text;
+for o:= 0 to SaveTxt.Count - 1 do
+  begin
+    if LoginAndPass = SaveTxt[o] then
+         begin
+          form4.Show;
+          ShowMessage('¬ход выполнен');
+          edit1.Text:='';
+          edit2.Text:='';
+         end;
+      end ;
+  end ;
+
+procedure TForm1.Image3MouseMove(Sender: TObject; Shift: TShiftState; X,
+  Y: Integer);
+begin
+  image3.Visible:= False;
+end;
+
+procedure TForm1.Image4Click(Sender: TObject);
+begin
+FORM3.Show;
+end;
+
+procedure TForm1.Image5Click(Sender: TObject);
+var
+  SaveTxt:TStringList;
+  o:integer;
+  loginandpass:string;
+begin
+SaveTxt:=TStringList.Create;
+SaveTxt.LoadFromFile(ExtractFilePath(application.ExeName)+ 'login.txt');
+Loginandpass:=edit1.Text+' '+Edit2.text;
+for o:= 0 to SaveTxt.Count - 1 do
+  begin
+    if LoginAndPass = SaveTxt[o] then
+         begin
+          form4.Show;
+          ShowMessage('¬ход выполнен');
+          edit1.Text:='';
+          edit2.Text:='';
+         end;
+      end ;
+  end ;
+
+procedure TForm1.Label1Click(Sender: TObject);
+begin
+  FORM3.Show;
+end;
+
+end.

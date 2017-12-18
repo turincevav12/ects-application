@@ -1,0 +1,43 @@
+{
+    "name": "ECTS",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "build": "node ./node_modules/webpack/bin/webpack.js",
+        "watch": "node ./node_modules/webpack/bin/webpack.js --watch",
+        "test": "xo",
+        "package": "./node_modules/.bin/electron-packager . ECTS --version=1.4.10 --app-version=0.1.0 --out=dist --ignore=dist --prune --overwrite ",
+		"start": "./node_modules/.bin/electron ."
+    },
+    "author": "bassik",
+    "license": "MIT",
+    "xo": {
+        "space": 2,
+        "=node": true,
+        "rules": {
+            "linebreak-style": [
+                0,
+                "windows"
+            ]
+        },
+        "envs": [
+            "browser"
+        ],
+        "ignores": [
+            "dist/**"
+        ]
+    },
+    "devDependencies": {
+        "babel-cli": "^6.18.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "electron-packager": "^8.3.0",
+        "webpack": "^3.8.1",
+        "xo": "^0.17.1"
+    },
+    "dependencies": {
+        "electron": "^1.4.12"
+    }
+}
